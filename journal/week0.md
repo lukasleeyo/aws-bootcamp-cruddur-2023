@@ -1,11 +1,11 @@
 # Week 0 — Billing and Architecture
 ## Set a Billing alarm
 I have created an AWS CloudWatch Billing alarm that will be triggered if the daily estimated charges exceeds $1. The notifications will be published to an AWS SNS Topic which my email has subscribed to it for the alerts. To be honest, I thought the billing alarm is just a notification alerts under AWS Budget, but apparently it's different and it's using AWS CloudWatch.
-![AWS CloudWatch Billing Alarm](./assets/cloudwatchbillingalarm.png)
+![AWS CloudWatch Billing Alarm](./assets/week0/cloudwatchbillingalarm.png)
 
 ## Set a AWS Budget
 As mentioned above, I have an AWS Budget configured set for USD 5. It will notify me when it reaches more than 80% of the budgeted USD 5 via email.
-![AWS Budget with alert](./assets/awsbudgetalert.png)
+![AWS Budget with alert](./assets/week0/awsbudgetalert.png)
 
 ## Generating AWS Credentials
 I have generated AWS credentials using the AWS console. The AWS credentials consists of AWS Access Key and Secret access key. I can use both the keys to access AWS services through AWS CLI and AWS SDK. This is so that I don't have to navigate around AWS Console everytime and can just use CLI to interact and manage AWS services. I have also configured it as environment PATH variables so that my GitPod instance remembers my AWS credentials.
@@ -14,6 +14,8 @@ I have generated AWS credentials using the AWS console. The AWS credentials cons
 I have also tried AWS CloudShell in the AWS console. But ultimately Andrew decides that we should do everything in our GitPod workspace. I also found out that my home region ap-southeast-1 Singapore doesn't have AWS cloudshell. So I had to go to the other region like us-east-1 to access the AWS cloudshell.
 
 ## Conceptual Architecture Diagram or your Napkins
+I still felt that the load balancer should only be interacting with the frontend because I feel it's weird for users able to access the backend directly. Unless Andrew meant that we are exposing our backend as maybe like RESTful APIs so that users like developers can use our service through APIs?
+![Napkins diagram](./assets/week0/napkin.png)
 
 
 ## Stop using your root account credentials, Set MFA, IAM users and IAM roles
