@@ -10,7 +10,7 @@ As mentioned above, I have an AWS Budget configured set for USD 5. It will notif
 I have generated AWS credentials using the AWS console. The AWS credentials consists of AWS Access Key and Secret access key. I can use both the keys to access AWS services through AWS CLI and AWS SDK. This is so that I don't have to navigate around AWS Console everytime and can just use CLI to interact and manage AWS services.
 
 ## Using CloudShell 
-
+test
 
 ## Conceptual Architecture Diagram or your Napkins
 
